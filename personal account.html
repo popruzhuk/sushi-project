@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <link rel="website icon" type='ico' href="img/favicon.ico">
+</head>
+<body>
+
+    <div class="popUp">
+        <div class="popUp-inner">
+            <div class="closePopUp"><img src="img/close.svg" alt=""></div>
+            <div class="popUp1">
+                <img src="img/menu_210x297-13 3.svg">
+            </div>
+            <div class="popUp2">
+                <h3>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</h3>
+                <h4>600 г/g</h4>
+                <p>Рис, лосось/куриное филе/креветки, овощи, соевый соус, чесночное масло</p>
+                <div class="popUpPrice-show">
+                    <h3 class="popUpPrice">60/50/65 <span>NIS</span></h3>
+                    <div class="numButtons popUpPrice-hidden" style="display: none;">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                </div>
+                <div class="numBut">
+                    <div class="numButtons">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                    <div class="buttonPop">
+                        <a href="#">В корзину</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+
+
+      <div class="basket">
+        <div class="basket-inner">
+            <div class="closeBasket"><img src="img/close.svg" alt=""></div>
+        <div class="mainBasket">
+            <div class="basket1">
+                
+                <div class="basketImgTxt">
+                    <img src="img/menu_210x297-13 3.svg" alt="">
+                    <div>
+                        <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                        <p class="busketGramm">250Г</p>
+                    </div>
+                </div>
+
+                <div class="basketPrice">
+                    <h3 class="popUpPrice">65 <span>NIS</span></h3>
+                    <div class="numButtons numButBask">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                    <img class="trashImg" src="img/trash.svg">
+                </div>
+
+            </div>    
+
+            <div class="basket1">
+                
+                <div class="basketImgTxt">
+                    <img src="img/menu_210x297-13 3.svg" alt="">
+                    <div>
+                        <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                        <p class="busketGramm">250Г</p>
+                    </div>
+                </div>
+
+                <div class="basketPrice">
+                    <h3 class="popUpPrice">65 <span>NIS</span></h3>
+                    <div class="numButtons numButBask">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                    <img class="trashImg" src="img/trash.svg">
+                </div>
+                
+            </div>
+
+            <div class="basket1">
+                
+                <div class="basketImgTxt">
+                    <img src="img/menu_210x297-13 3.svg" alt="">
+                    <div>
+                        <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                        <p class="busketGramm">250Г</p>
+                    </div>
+                </div>
+
+                <div class="basketPrice">
+                    <h3 class="popUpPrice">65 <span>NIS</span></h3>
+                    <div class="numButtons numButBask">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                    <img class="trashImg" src="img/trash.svg">
+                </div>
+                
+            </div>
+
+            <div class="basket1">
+                
+                <div class="basketImgTxt">
+                    <img src="img/menu_210x297-13 3.svg" alt="">
+                    <div>
+                        <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                        <p class="busketGramm">250Г</p>
+                    </div>
+                </div>
+
+                <div class="basketPrice">
+                    <h3 class="popUpPrice">65 <span>NIS</span></h3>
+                    <div class="numButtons numButBask">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                    <img class="trashImg" src="img/trash.svg">
+                </div>
+                
+            </div>
+
+            <div class="basket1">
+                
+                <div class="basketImgTxt">
+                    <img src="img/menu_210x297-13 3.svg" alt="">
+                    <div>
+                        <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                        <p class="busketGramm">250Г</p>
+                    </div>
+                </div>
+
+                <div class="basketPrice">
+                    <h3 class="popUpPrice">65 <span>NIS</span></h3>
+                    <div class="numButtons numButBask">
+                        <div class="minusBtn minusBtnPopUp" onclick="changeNum(this, -1)"></div>
+                            <p class="btnsNum">0</p>
+                        <div class="plusBtn plusBtnPopUp" onclick="changeNum(this, 1)"></div>
+                    </div>
+                    <img class="trashImg" src="img/trash.svg">
+                </div>
+            </div>
+        </div>
+            <div class="summ">
+                <div class="summNum">
+                    <p>Сумма заказа</p>
+                    <h3 class="popUpPrice">325 <span>NIS</span></h3>
+                </div>
+                <div class="summTxt">
+                    <a class="clearTrash" href="">Очистить корзину</a>
+                    <a class="makeDeal" href="checkOut.html">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header id="header">
+        <div class="header-inner">
+            
+            <div class="burger">
+                <img src="img/burgerCLose.svg">
+            </div>
+
+            <nav class="burgerMenu">
+                <div class="closeBurgerMenu">
+                    <div class="closeBurgerMenuBTN"><img src="img/burgerOpen.svg"></div>
+                    <div class="language-selector languageBurger">
+                        <button class="dropdown-btn">
+                            RU <img src="img/Frame 879.png" class="dropdown-icon">
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="selectLanguage('EN')">EN</a>
+                            <a href="#" onclick="selectLanguage('IS')">IS</a>
+                            <a href="#" onclick="selectLanguage('RU')">RU</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="burgerOne">
+                    <h2><a class="burgerMenuIndex" href="index.html">Меню</a></h2>
+
+                    <div class="burgerTwoMenu">
+                        <div class="burgerUlLi">
+                            <ul>
+                                <a href="promotions and discounts.html"><li>Акции</li></a>
+                                <a href="novinki.html"><li>Новинки</li></a>
+                                <a href="novinki.html"><li>Хиты</li></a>
+                                <a href="novinki.html"><li>Суши сеты</li></a>
+                                <a href="novinki.html"><li>Горячие роллы</li></a>
+                                <a href="novinki.html" class="ulLiLast"><li>Запеченные роллы</li></a>
+                            </ul>
+                        </div>
+                        <div class="burgerUlLi">
+                            <ul>
+                                <a href="novinki.html"><li>Футомаки</li></a>
+                                <a href="novinki.html"><li>Салаты</li></a>
+                                <a href="novinki.html"><li>Рис, лапша</li></a>
+                                <a href="novinki.html"><li>Закуски</li></a>
+                                <a href="novinki.html"><li>Соусы</li></a>
+                                <a href="novinki.html" class="ulLiLast"><li>Напитки</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="burgerTwo">
+                    <ul>
+                        <a href="delivery.html"><li>Доставка</li></a>
+                        <a href="aboutUS.html"><li>О нас</li></a>
+                        <a href="contacts.html" class="ulLiLastCont"><li>Контакты</li></a>
+                    </ul>
+                </div>
+
+                <div class="burgerThree">
+                    <div class="footerBurger">
+                        <div class="footerInfoBurger">
+                            <div class="infTelBurger">
+                                <a href="+48 789 894 154">+48 789 894 154</a>
+                                <a href="+48 789 894 154">+380 67 317 0029</a>
+                            </div>
+            
+                            <div class="infAdressBurger">
+                                <p>Jana Dantyszka 18, <br>
+                                    Warsaw, Poland</p>
+                            </div>
+            
+                            <div class="infGmailBurger">
+                                <a href="Office@ntk-pl.com">Office@ntk-pl.com</a>
+                            </div>
+                        </div>
+
+                        <div class="footerBurgerLogo">
+                            <a href="index.html"><img src="img/headerLogo.svg"></a>   
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="headerNum">
+                <p>7989</p>
+            </div>
+
+            <div class="headerLogo">
+                <a href="index.html"><img src="img/headerLogo.svg"></a>    
+            </div>
+
+            <div class="headerCab">
+                <div class="language-selector">
+                    <button class="dropdown-btn">
+                        RU <img src="img/Frame 879.png" class="dropdown-icon">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="selectLanguage('EN')">EN</a>
+                        <a href="#" onclick="selectLanguage('IS')">IS</a>
+                        <a href="#" onclick="selectLanguage('RU')">RU</a>
+                    </div>
+                </div>
+                <a href="#" class="showBusket"><img src="img/sumka.webp"></a>
+                <a href="login.html"><img src="img/person.webp"></a>
+            </div>
+        </div>
+    </header>
+
+<div class="allBg">
+     
+    <section class="underHeader" id="underHeader">
+        <div class="underHeader-inner">
+            <a href="index.html" style="color: #93B440; font-weight: 600;">Меню</a>
+            <a href="promotions and discounts.html">Акции</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="aboutUS.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+        </div>
+        <div class="underMenu">
+            <div>
+                <a href="index.html">Главная</a>
+                /
+                <a class="aInactive">Личный кабинет</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="personalAcc">
+        <div class="personalAcc-inner personalAccRelative">
+                <h2>
+                    Личный кабинет
+                </h2>
+
+                                        
+        <div class="exitAcc">
+            <div>
+                <img src="img/exit.svg">
+                <p>Выйти из аккаунта</p>
+            </div>
+        </div>
+
+                <div class="PersonalData">
+                    <h3>Личные данные</h3>
+                    <input type="text" placeholder="Эл. Пошта">
+                    <input type="text" placeholder="Телефон">
+                </div>
+
+                <div class="adress1">
+                    <h4>АДРЕС 1</h4>
+
+                    <input type="text" placeholder="Улица" class="firstInputAdress">
+                        
+                        <div class="adress1Grid">
+                            <input type="text" placeholder="Дом">
+                            <input type="text" placeholder="Корпус">
+                            <input type="text" placeholder="Подъезд">
+                            <input type="text" placeholder="Код подъезда">
+                            <input type="text" placeholder="Этаж">
+                            <input type="text" placeholder="Квартира">
+                        </div>
+                </div>
+
+                <div class="adress2">
+                    <h4>АДРЕС 2</h4>
+
+                    <input type="text" placeholder="Улица" class="firstInputAdress">
+                        
+                        <div class="adress1Grid">
+                            <input type="text" placeholder="Дом">
+                            <input type="text" placeholder="Корпус">
+                            <input type="text" placeholder="Подъезд">
+                            <input type="text" placeholder="Код подъезда">
+                            <input type="text" placeholder="Этаж">
+                            <input type="text" placeholder="Квартира">
+                        </div>
+                </div>
+
+                <button class="personalAccButton">Сохранить</button>
+
+                <div class="orderHistory">
+                        <h3>История заказов</h3>
+
+                        <div class="orderHistory-inner">
+                            <div class="headerOrderHistory">
+                                <h4>Заказ 09.06.24</h4>
+                                <h4 class="popUpPrice">195 <span>NIS</span></h4>
+                            </div>
+
+                            <div class="footerOrderHistory">
+                                <div class="ord1">
+                                    <h5 class="h5-hidden">x1</h5>
+                                    <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                                    <a>1 шт</a>
+                                    <h4 class="popUpPrice ord1Price">65 <span>NIS</span></h4>
+                                </div>
+                                <div class="ord1">
+                                    <h5 class="h5-hidden">x1</h5>
+                                    <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                                    <a>1 шт</a>
+                                    <h4 class="popUpPrice ord1Price">65 <span>NIS</span></h4>
+                                </div>
+                                <div class="ord1">
+                                    <h5 class="h5-hidden">x1</h5>
+                                    <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                                    <a>1 шт</a>
+                                    <h4 class="popUpPrice ord1Price">65 <span>NIS</span></h4>
+                                </div>
+                            </div>
+
+                            <div class="priceHidden">
+                                <h4 class="popUpPrice">195 <span>NIS</span></h4>
+                            </div>
+                        </div>
+
+                        <div class="orderHistoryButton">
+                            <a href="#">Повторить заказ</a>
+                        </div>
+
+                        <div class="orderHistory-inner2">
+                            <div class="headerOrderHistory">
+                                <h4>Заказ 09.06.24</h4>
+                                <h4 class="popUpPrice">195 <span>NIS</span></h4>
+                            </div>
+
+                            <div class="footerOrderHistory">
+                                <div class="ord1">
+                                    <h5 class="h5-hidden">x1</h5>
+                                    <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                                    <a>1 шт</a>
+                                    <h4 class="popUpPrice ord1Price">65 <span>NIS</span></h4>
+                                </div>
+                                <div class="ord1">
+                                    <h5 class="h5-hidden">x1</h5>
+                                    <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                                    <a>1 шт</a>
+                                    <h4 class="popUpPrice ord1Price">65 <span>NIS</span></h4>
+                                </div>
+                                <div class="ord1">
+                                    <h5 class="h5-hidden">x1</h5>
+                                    <p>Рис/яичная лапша с лососем/куриным филе/креветками на выбор</p>
+                                    <a>1 шт</a>
+                                    <h4 class="popUpPrice ord1Price">65 <span>NIS</span></h4>
+                                </div>
+                            </div>
+
+                            <div class="priceHidden">
+                                <h4 class="popUpPrice">195 <span>NIS</span></h4>
+                            </div>
+                        </div>
+
+                        <div class="orderHistoryButton">
+                            <a href="#">Повторить заказ</a>
+                        </div>
+                 </div>
+        </div>
+    </section>
+
+
+
+
+</div> 
+
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footerLogo">
+            <a href="index.html"><img src="img/headerLogo.svg"></a>  
+        </div>
+        <div class="footerInf">
+
+            <div class="footerInfo">
+                <div class="infTel">
+                    <a href="+48 789 894 154">+48 789 894 154</a>
+                    <a href="+48 789 894 154">+380 67 317 0029</a>
+                </div>
+
+                <div class="infAdress">
+                    <p>Jana Dantyszka 18, <br>
+                        Warsaw, Poland</p>
+                </div>
+
+                <div class="infGmail">
+                    <a href="Office@ntk-pl.com">Office@ntk-pl.com</a>
+                </div>
+            </div>
+            <div class="footerInfo">
+                <div class="infTel">
+                    <a href="+48 789 894 154">+48 789 894 154</a>
+                    <a href="+48 789 894 154">+380 67 317 0029</a>
+                </div>
+
+                <div class="infAdress">
+                    <p>Jana Dantyszka 18, <br>
+                        Warsaw, Poland</p>
+                </div>
+
+                <div class="infGmail">
+                    <a href="Office@ntk-pl.com">Office@ntk-pl.com</a>
+                </div>
+            </div>
+            <div class="footerInfo footinfLast">
+                <div class="infTel">
+                    <a href="+48 789 894 154">+48 789 894 154</a>
+                    <a href="+48 789 894 154">+380 67 317 0029</a>
+                </div>
+
+                <div class="infAdress">
+                    <p>Jana Dantyszka 18, <br>
+                        Warsaw, Poland</p>
+                </div>
+
+                <div class="infGmail">
+                    <a href="Office@ntk-pl.com">Office@ntk-pl.com</a>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <div class="footerPrivacy">
+        <a href="">Privacy policy</a>
+        <a href="">Terms of service</a>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/popUp.js"></script>
+<script src="js/animateUnderHeader.js"></script>
+
+
+</body>
+</html>

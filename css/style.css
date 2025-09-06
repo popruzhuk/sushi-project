@@ -1,0 +1,3592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDEFED;
+}
+
+.pin-spacer {
+    z-index: auto !important;
+    inset: 38px auto auto 0px;
+}
+
+.aActive {
+    color: #93B440 !important;
+    font-weight: 600 !important;
+}
+
+.allBg {
+    background-image: url('../img/allBg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: white;
+    width: 100%;
+    padding: 32px 0;
+    z-index: 7; /* Додамо z-index для верхнього шару */
+}
+
+.header-inner, .underHeader-inner, .menu-inner {
+    width: 1340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-inner {
+    justify-content: space-around;
+}
+
+.underHeader {
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    z-index: 5;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    background-color: #EDEFED;
+    background-image: url('../img/allBg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 10px;
+}
+
+.underHeader-inner {
+    background: #ffffff;
+    justify-content: space-around;
+    padding: 15px 80px;
+    margin-top: 51px;
+    margin-bottom: 6px;
+    border-radius: 45px;
+}
+
+.underHeader-inner a {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: black;
+    text-decoration: none;        
+}
+
+.underHeader-inner a:hover {
+    color: #93B440;
+}
+
+.headerNum {
+    font-family: Oswald;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: left;
+    color: #58595B;
+}
+
+.headerLogo img {
+    max-width: 180px;
+}
+
+.headerCab img {
+    max-width: 20px;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.6px;
+    text-align: left;
+    width: 50px;
+    gap: 5px;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.dropdown-btn:hover, .dropdown-btn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.languageBurger {
+    display: none;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+    text-align: center;
+    width: 100%;
+} 
+
+.headerCab {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 120px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-inner {
+    background-image: url('../img/bgWhite.webp');
+    border-radius: 45px;
+    background-size: cover;
+    flex-direction: column;
+    padding: 100px 82px 0 76px;
+    overflow: hidden;
+    background-position: top;
+    position: relative;
+}
+
+#underHeader {
+    padding-bottom: 0 !important;
+}
+
+#header, #underHeader {
+    height: auto !important;
+}
+
+.underMenu:after {
+    content: '';
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
+    height: 40px;
+    -webkit-border-top-left-radius: 45px;
+    border-top-left-radius: 45px;
+    -webkit-border-top-right-radius: 45px;
+    border-top-right-radius: 45px;
+    z-index: 2;
+    background-image: url('../img/bgWhite.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-inner h2 {
+    padding-bottom: 65px;
+    font-family: Fira Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 68.75px;
+    text-align: center;
+}
+
+.menu-inner img, .navCatal img {
+    max-width: 100%;
+    transition: transform 3s ease;
+    
+}
+
+.menuImage:hover {
+    transform: none !important;
+}
+
+.menu-inner img:hover, .navCatal img:hover {
+    transform: scale(1.1);
+    transition: transform 15s, filter 3s ease-in-out;
+}
+
+.menu-grid {
+    padding: 78px 82px 147px 82px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 120px;
+    grid-row-gap: 20px;
+    align-items: baseline;
+}
+
+.menu-grid a {
+    text-decoration: none;
+    color: black;
+}
+
+.position {
+    overflow: hidden;
+}
+
+.position p {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 275;
+    line-height: 27px;
+    text-align: center;
+    padding-top: 27px;
+    text-transform: uppercase;    
+}
+
+.position1,
+.position2, 
+.position3,
+.position4, 
+.position5, 
+.position6 { height: 310px; }
+ 
+
+.underMenuH3 {
+    font-family: Fira Sans;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42.5px;
+    text-align: center;
+    padding-bottom: 71px;
+}
+
+.catalogue-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 67px;
+}
+
+.catal h3, .popUpPrice {
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27.5px;
+    text-align: left;    
+    padding: 22px 0;
+}
+
+.popUpPrice {
+    position: relative;
+}
+
+.catal span, .popUpPrice span {
+    font-family: Fira Sans;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 21.25px;
+    text-align: left;
+    color: #93B440;
+    position: absolute;
+    padding-left: 2px;
+}
+
+.catal p {
+    font-family: Fira Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 25.55px;
+    text-align: left;
+}
+
+.catalPGramm {
+    padding-bottom: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gramm {
+    font-family: Fira Sans;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 25.55px;
+    text-align: left;        
+}
+
+.catal h4 {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+    padding-bottom: 17px;
+    opacity: 60%;
+}
+
+.catal a, .promGridBlock a, .buttonPop a {
+    font-family: Fira Sans;
+    font-size: 18.93px;
+    font-weight: 500;
+    line-height: 25.55px;
+    text-align: center;
+    padding: 15px 70px;
+    color: black;
+    border: 1px solid black; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 42px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonPop a {
+    width: fit-content;
+}
+
+.promGridBlock a {
+    margin-top: 12px;
+}
+
+.noborder {
+    border: none !important;
+    padding: 0 !important;
+}
+
+.noborder:active {
+    transform: none !important;
+}
+
+.noborder:hover {
+    background-color: inherit !important;
+}
+
+.catal a:hover, .promGridBlock a:hover, .buttonPop a:hover {
+    background-color: black;
+    color: white;
+}
+
+.catal a:active, .promGridBlock a:active, .buttonPop a:active {
+    transform: scale(1.1);
+}
+
+.darkCont{
+    transition: all 3s ease;
+    position: relative;
+}
+
+.menuButton {
+    margin: 122px 0 76px 0;
+    transition: transform 0.2s ease;
+}
+
+.novinkiBut {
+    display: none;
+}
+
+.menuButton a {
+    padding: 16px 36px;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    color: white;
+    opacity: 50%;
+    border-radius: 50px;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;    
+}
+
+.menuButton:hover, .orderHistoryButton:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+}
+
+.orderHistoryButton:active, .textAreaInput a:active, .makeDeal:active, .prod:active {
+    transform: scale(0.9);
+}
+
+footer {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: 
+    url('../img/footerImg.webp'),
+    url('../img/vetka.webp'), 
+    url('../img/line.svg');
+    background-size: 
+    20% 40%,
+    20% 40%,
+    100% 10%;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 
+    0% 100%,
+    100% 50%, 
+    1% 93%;
+}
+
+.footer-inner {
+    width: 1340px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 90px;
+}
+
+.footerLogo {
+    text-align: left;
+    margin: 60px 0 40px;
+}
+
+.footerLogoLast {
+    display: none;
+}
+
+.footerLogo img {
+    max-width: 100%;
+}
+
+.infTel, .infFooter {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.infFooter {
+    text-align: justify;
+    width: 100%;
+}
+
+.infTel a, .infGmail a{
+    text-decoration: none;
+    color: black;
+}
+
+.infAdress {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: black;
+    padding: 29px 0;
+}
+
+.infGmail {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: black;
+}
+
+.footerPrivacy {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    margin: 22px 0;
+    display: flex;
+    gap: 69px;
+    justify-content: center;
+}
+
+.footerPrivacy a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* .footerPrivacy a:nth-child(1) {
+    margin-right: 78px;
+} */
+
+.footerPrivacyMenu {
+    display: flex;
+    gap: 69px;
+}
+
+.footerPrivacyMenuUnderInf {
+    display: none;
+}
+
+.footerInf {
+    display: flex;
+    justify-content: space-between;
+    gap: 224px;
+}
+
+.underMenu {
+    width: 1340px;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    display: flex;
+    align-items: start;
+    flex-direction: column;   
+}
+
+.underMenu a {
+    text-decoration: none;
+    color: black;
+}
+
+.underMenu a:hover {
+    color: #93B440;
+}
+
+.aInactive:hover {
+    color: #000 !important;
+    cursor: not-allowed;
+}
+
+.underMenu div:nth-of-type(1) {
+    backdrop-filter: blur(3px); /* Налаштовуємо ступінь розмиття */
+    background-color: rgba(255, 255, 255, 0.3); /* Додаємо прозорий фон для ефекту розмиття */
+    padding: 0 10px; /* Додаємо відступи для кращого вигляду */
+    border-radius: 8px; /* Можна додати скруглення кутів */
+    flex-direction: row;
+}
+
+/*/// promotions and discounts */
+
+.promDisc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promDisc-inner {
+    width: 1340px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../img/bgWhite.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 45px;
+    flex-direction: column;
+    padding: 100px 82px 75px 82px;
+    margin-bottom: 120px;
+}
+
+.promDisc-inner h2 {
+    font-family: Fira Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 68.75px;
+    text-align: center;
+    padding-bottom: 65px;
+}
+
+.gridProm {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 42px;
+}
+
+.promGridBlock img{
+    width: 100%;
+}
+
+.gridPromNone {
+    display: none;
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;    
+    padding: 100px 0;
+}
+
+.gridPromTxt {
+    margin-top: 103px;
+}
+
+.gridPromTxt h3 {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+    text-align: left;
+}
+
+.gridPromTxt p {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: left;        
+}
+
+.gridPromTxt p:nth-child(2) {
+    padding: 22px 0 28px 0;
+}
+
+/* PROMOTION NEXT */
+
+.txtGrid {
+    display: flex;
+}
+
+.txtGrid-Hidden {
+    display: none;
+}
+
+.txtGridDiv {
+    margin-top: 0;
+    width: 78%;
+    padding-right: 45px;
+}
+
+.txtGridDiv img {
+    margin-bottom: 69px;
+}
+
+.promGridBlockProm {
+    width: 22%;
+}
+
+.promGridBlock2 {
+    margin-bottom: 42px;
+}
+
+/* promotions and discounts  END*/
+
+/* DELIVERY STARTS */
+.delivery-inner div {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;       
+}
+
+.deliveryBlocks span {
+    font-weight: 700;
+}
+
+.deliveryBlocks {
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+.deliveryBlocks div:nth-of-type(2) p {
+    line-height: 36px;
+}
+/* DELIVERY ENDS */
+
+/* ABOUTUS STARTS */
+
+.aboutUsBlocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUsBlocks div {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: center;
+}
+
+.aboutUsBlocks div:nth-of-type(1) {
+    text-transform: uppercase;
+    font-family: Fira Sans;
+    padding-bottom: 23px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+    text-align: center;    
+}
+
+.aboutUsBlocks div:nth-of-type(1) br {
+    display: none;
+}
+
+.aboutUsBlocks div:nth-of-type(2) {
+    opacity: 70%;
+    padding-bottom: 54px;
+    text-transform: capitalize;
+    width: 50%;
+} 
+
+.aboutUsBlocks div:nth-of-type(3) {
+    padding-bottom: 35px;
+}
+
+.aboutUsBlocks span {
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ABOUTUS ENDS */
+
+/* NOVINKI START */
+
+.novinki {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.novinki-inner {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../img/bgWhite.webp');
+    background-size: cover;
+    border-radius: 45px;
+    width: 1340px;
+    padding: 100px 82px 75px;
+    gap: 90px;
+}
+
+.novinki-nav {
+    width: 30%;
+}
+
+.novinki-nav ul li {
+    list-style-type: none;
+    border-radius: 45px;
+    background-color: #F2F2F2;
+    padding: 13px 21px;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.99px;
+    text-align: left;
+    width: 250px;     
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+
+.novinki-nav ul li:hover {
+    transform: scale(1.05);
+}
+
+.novinki-nav ul li:active {
+    transform: scale(0.99);
+}
+
+.liActive {
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    color: white;
+    opacity: 50%;
+}
+
+.novinki-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.novinki-nav ul li span {
+    opacity: 40%;
+}
+
+.novinki-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.novMenuH2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 12px;
+    margin-bottom: 52px;
+}
+
+.novMenuH2 p {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: center;
+    position: relative;
+}
+
+.novMenuH2 a {
+    text-decoration: none;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 19px;
+
+}
+
+
+.fa-secondary {
+    fill: url(#gradient);
+}
+
+.fa-primary {
+    fill: url(#gradient);
+    opacity: 54%;
+}
+  
+
+.sort-down {
+    display: flex;
+    width: 13px;
+    height: 18px;
+    position: absolute;
+    top: 1%;
+    right: 0;
+}
+
+.novMenuH2 h2 {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+}
+
+.novMenuGrid {
+    gap: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+}
+
+.navCatal img {
+    max-width: 262px;
+}
+
+/* NOVINKI END*/
+
+/* Contacts start*/
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.contacts-inner {
+    display: flex;  
+    justify-content: space-between;
+    background-image: url('../img/bgWhite.webp');
+    background-size: cover;
+    border-radius: 45px;
+    width: 1340px;
+    padding: 100px 82px 75px;
+    flex-direction: column;
+}
+
+.contacts-inner h2 {
+    font-family: Fira Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 68.75px;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.contacts-inner h4 {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 93px 0 63px;
+}
+
+.threeContacts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.threeContactsFooter {
+    gap: 17px;
+    flex-direction: column;    
+}
+
+.contFoot, .cont2Foot {
+    padding: 0;
+    border: none !important;
+}
+
+.footerInfo1 {
+    width: 37%;
+}
+
+.threeContactsFooter h3, .threeContactsFooter p {
+    text-align: left !important;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 59px;
+    border-right: 1px solid #000000;
+}
+
+.contact:nth-of-type(3) {
+    padding-right: 0;
+    border-right: none;
+}
+
+.contact h3 {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: center;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.contact p {
+    font-family: Fira Sans;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: center;    
+}
+
+.cont2 h6 {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    opacity: 60%;    
+}
+
+.contactMap iframe {
+    border-radius: 20px;
+}
+
+.conactsImg {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Contacts End*/
+
+/* login start */
+
+.login-inner {
+    align-items: center;
+}
+
+.login-inner h2 {
+    margin-bottom: 95px;
+}
+
+.loginMain {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#telephone, #password, #email, .formInput {
+    padding: 19.5px 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 45px;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+}
+
+.formInput input {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;        
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+}
+
+#password, .formInputPassword {
+    margin: 16px 0 25px 0;
+}
+
+#email, .formInputEmail, .formInputPhone {
+    margin-top: 16px;
+}
+
+.underLogin a, .loginMain a, .loginButt {
+    position: relative;
+    text-align: center;
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 19.99px;
+    color: #ffffff;
+    padding: 20px 0;
+    text-decoration: none;
+    border-radius: 45px;
+    z-index: 1;
+}
+
+.loginButt {
+    width: 100%;
+    border: none !important;
+    cursor: pointer;
+}
+
+.loginButt:hover {
+    transform: scale(1.1);
+}
+
+.voitu::before, .loginButt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(199.52deg, rgba(245, 234, 20, 0.5) -20.22%, rgba(13, 140, 69, 0.5) 72.6%);
+    border-radius: 45px;
+    z-index: -1;
+}
+
+.underLogin {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.underLogin p {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.99px;
+    text-align: left;
+    padding-right: 11px;    
+}
+
+.underLogin a {
+    position: relative;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.99px;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.underLogin a::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    height: 1px; /* Adjust the thickness of the underline */
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+}
+/* login end */
+
+.popUp {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .4s ease;
+}
+
+.popUpActive {
+    display: flex;
+    transition: .4s ease;
+    overflow-y: scroll;
+}
+
+.popUp1 img {
+    max-width: 100%;
+}
+ 
+.souseActive {
+    display: flex !important;
+}
+
+.basket.active {
+    display: flex;
+    transition: .4s ease;   
+}
+
+.basket-inner::-webkit-scrollbar {
+    display: none;
+    /* padding-left: 5px; */
+}
+
+.basketFree {
+    display: flex;
+    font-family: Fira Sans;
+    font-size: 24.59px;
+    font-weight: 500;
+    line-height: 30.74px;
+    text-align: left;    
+    gap: 86px;
+}
+
+.basketFree div:nth-of-type(2) {
+    font-family: Fira Sans;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 32.4px;
+    text-align: left;    
+}
+
+.souseH2 {
+    font-family: Fira Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 68.75px;
+    text-align: center;    
+    padding: 10px 0 25px;
+}
+
+.popUp-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+    padding: 56px 85px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.basketAddOff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+}
+
+.popUp2 h3 {
+    font-family: Fira Sans;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 31.25px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.popUp2 h4 {
+    font-family: Nunito;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 27.5px;
+    padding: 16px 0 30px;
+}
+
+.popUp2 p {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: left;
+}
+
+
+.option {
+    margin-top: 20px;
+    border: 1px solid #93B440;
+    width: fit-content;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: left;        
+}
+
+.popUpPrice-show {
+    border-top: 1px solid;
+}
+
+.optionActive {
+    background-color: #93B440;
+    border-radius: 15px;
+    color: white;
+}
+
+.option div {
+    cursor: pointer;
+    padding: 12px 50px;
+}
+
+.numBut {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.numButtons {
+    display: flex;
+    align-items: center;
+}
+
+.numButtons p {
+    padding: 0 19px;
+    border-bottom: none;
+    width: 50px;
+}
+
+.buttonPop {
+    width: 60%;
+}
+
+.basket, .souse {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.basket-inner {
+    overflow-y: scroll;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    margin: 50px;
+    padding: 50px 50px 42px; 
+    position: relative;
+}
+
+.mainBasket {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.fullBasket {   /* коли у корзині є товари/*/
+    display: block;
+}
+
+.emptyBasket {   /* коли корзина пуста/*/
+    display: none;
+    justify-content: center;
+    margin: auto 0;
+    font-family: fira sans;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+}
+
+.closeBasket, .closePopUp, .closeSouse {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+}
+
+.basket1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basketImgTxt {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.basketImgTxt img {
+    width: 105px;
+    height: 105px;
+}
+
+.busketGramm {
+    font-weight: 700 !important;
+}
+
+.basketImgTxt p {
+    font-family: Fira Sans;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.basketPrice {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.trashImg {
+    cursor: pointer;
+    height: fit-content;
+}
+
+.numButBask {
+    margin: 0 31px 0 80px;
+}
+
+.numButBask p {
+    font-family: Fira Sans;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 32.4px;
+    text-align: left;    
+    width: 60px;
+}
+
+.basketPrice>.popUpPrice {
+    font-weight: 500;
+}
+
+.popUpPrice span {
+    top: 15px;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.summ {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+    border-top: 1px solid;
+}
+
+.summNum, .summTxt {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.summNum p {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.5px;
+    text-align: left;    
+}
+
+.summNum h3 {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.summTxt {
+    gap: 28px;
+}
+
+.summTxt a {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+        
+}
+
+.clearTrash {
+    color: #000000;
+}
+
+.makeDeal, .prod {
+    color: white;
+    text-decoration: none;
+    border-radius: 45px;
+    width: 238px;
+    padding: 13px 0;
+    text-align: center;
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.closeBurgerMenu {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeBurgerMenuBTN, .prod {
+    cursor: pointer;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+/* PERSONAL ACC START */
+
+.personalAcc form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.personalAccForm form {
+    display: block;
+}
+
+.personalAcc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalAcc-inner {
+    width: 1340px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../img/bgWhite.webp');
+    background-size: cover;
+    border-radius: 45px;
+    padding: 100px 82px 0 76px;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+
+.personalAcc-inner h2 {
+    font-family: Fira Sans;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 68.75px;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.personalAcc-inner h3 {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.PersonalData input, .adress1 input, .adress2 input, .dataInput input {
+    padding: 19px 20px;
+    border: 1px solid #D9D9D9;
+    gap: 15px;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;       
+    border-radius: 20px;
+    opacity: 75%;
+    background: inherit;
+}
+
+.PersonalData input {
+    margin-right: 10px;
+}
+
+.delivery1Grid input {
+    width: 216px;
+}
+
+.formDivInput {
+    width: 100%;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.dataInput {
+    margin-top: 35px;
+    display: flex;
+    gap: 17px;
+}
+
+textarea {
+    resize: none;
+}
+
+.textAreaInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+}
+
+.textAreaInput textarea{
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;
+    background: inherit;
+    width: 43%;
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+    padding: 25px 20px;
+    height: 232px;
+}
+
+.textAreaInput a, .personalAccButton {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 19.99px;
+    padding: 21px 156px;
+    border-radius: 20px;
+    background: linear-gradient(199.52deg, #F5EA14 -20.22%, #0D8C45 72.6%);
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    opacity: 70%;
+}
+
+.personalAccButton {
+    cursor: pointer;
+    border: none;
+    width: 66%;
+    margin-top: 38px;
+}
+
+.firstInputAdress {
+    width: 66%;
+}
+
+.firstInputAdressDelivery {
+    width: 38% !important;
+}
+
+.adress1Grid {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.delivery1Grid {
+    grid-template-columns: repeat(3, 216px);
+}
+
+.adress1 h4, .adress2 h4 {
+    font-family: Fira Sans;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27.5px;
+    text-align: left;
+    margin: 37px 0 20px;        
+}
+
+.delivery1 h4 {
+    font-family: Fira Sans;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    margin-top: 75px;
+    text-align: left;
+}
+
+.mgTop {
+    margin-top: 35px;
+}
+
+.orderHistory {
+    display: flex;
+    flex-direction: column;
+    margin: 92px 0 110px;
+}
+
+.orderHistory h3{
+    margin-bottom: 45px;
+}
+
+.orderHistory-inner, .orderHistory-inner2 {
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    border: 1px solid #D9D9D9;
+    padding: 17px 20px 30px;
+}
+
+.orderHistory-inner2 {
+    margin-top: 125px;
+}
+
+.headerOrderHistory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 30px;
+}
+
+.headerOrderHistory h4 {
+    text-transform: uppercase;
+    font-family: Fira Sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;    
+}
+
+.h5-hidden, .priceHidden {
+    display: none;
+}
+
+.ord1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 106px 0 30px;
+}
+
+.ord1 p {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: left;
+    text-transform: uppercase;  
+    width: 40%;   
+}
+
+.ord1 a {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;    
+}
+
+.orderHistoryButton {
+    display: block;
+    margin: 36px auto 0;
+    text-align: center;
+}
+
+.orderHistoryButton a {
+    background-color: #000;
+    border-radius: 20px;
+    opacity: 80%;
+    padding: 19px 118px;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.99px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.orderHistoryButton a:hover, .personalAccButton:hover {
+    transform: scaleY(1.1);
+}
+
+.personalAccRelative{
+    position: relative;;
+}
+
+.exitAcc {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    background: #FF6161;
+    padding: 18px 20px 18px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.exitAcc:hover {
+    transform: scale(1.1);
+}
+
+.exitAcc:active {
+    box-shadow: 0px 4px 4px 0px #00000078 inset;
+    transform: scale(0.9);
+}
+
+.exitAcc div {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;       
+    color: white; 
+    display: flex;
+    gap: 20px;
+}
+
+
+/* PERSONAL ACC END */
+
+/* CHECKOUT START */
+
+.cutlerycheckOut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cutlery {
+    display: grid;
+    grid-template-columns: repeat(2, 253px);
+    gap: 15px;
+}
+
+.cutlery1 {
+    display: flex;
+    padding: 14px 20px;
+    border-radius: 22.59px;
+    border: 1.13px solid #D9D9D9;
+    gap: 25px;
+}
+
+.cutleryBtn {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.minusBtn, .plusBtn {
+    width: 31px;
+    height: 31px;
+    max-width: 100%;
+    border: 0.81px solid #000000;
+    border-radius: 8.14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.minusBtnPopUp, .plusBtnPopUp {
+    border: none;
+    width: 38px;
+    height: 56px;
+    background-color: #F1F1F1;
+}
+
+.numBut p, .popUpPrice-hidden p {
+    font-family: Fira Sans;
+    font-size: 27px !important;
+    font-weight: 400 !important;
+    line-height: 32.4px !important;
+    text-align: left;    
+}
+
+.minusBtn:hover, .plusBtn:hover {
+    background-color: #000;
+}
+
+.minusBtn:hover::after, .plusBtn:hover::after, .plusBtn:hover::before {
+    background-color: white;
+}
+
+.minusBtn::after, .plusBtn::after {
+    content: '';
+    display: flex;
+    width: 11px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.plusBtn::before {
+    content: '';
+    display: flex;
+    width: 1px;
+    height: 11px;
+    background-color: #000000;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.cutleryTxt p, .btnsNum {
+    font-family: Fira Sans;
+    font-size: 20.33px;
+    font-weight: 400;
+    line-height: 40.67px;
+    text-align: left;    
+}
+
+.rightCheckOut {
+    border: 1px solid #D9D9D9;
+    padding: 43px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+.rightCheckOutHidden {
+    display: none;
+}
+
+.right-checkout-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+.right-checkout-final {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 10px;
+} 
+
+.rightCheckOut h3 {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37.5px;
+}
+
+.right-checkout-info-txt, .right-checkout-final-txt {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;    
+}
+
+.right-checkout-info-value, .right-checkout-final-value {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;    
+}
+
+.right-checkout-final-value {
+    font-weight: 800;
+}
+
+.delAdress {
+    display: flex;
+    flex-direction: column;
+}
+
+.delAdressfirst {
+    flex-direction: row;
+}
+
+.courier {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+    gap: 140px;
+    padding: 14px 60px;
+    position: relative;
+    width: fit-content;
+}
+
+.courier::after {
+    content: '';
+    display: flex;
+    width: 1px;
+    height: 32px;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.courier1, .courier2 {
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;    
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    text-underline-position: under;
+}
+
+.courier1.active, .courier2.active, .courier1:hover, .courier2:hover {
+    text-decoration: underline;
+}
+
+.hurry {
+    display: none;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: left;
+    color: #FF5E5E;    
+    text-transform: uppercase;
+}
+
+/* .popUp-inner {
+    display: none;
+} */
+
+.BasketAdd {
+    display: none;
+}
+
+.basketAddOff {
+    /* display: none; */
+}
+
+.BasketAdd div {
+    font-family: Fira Sans;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    font-size: clamp(1rem, -0.0417rem + 2.1701vw, 2.5625rem);    
+}
+
+.hurryActive {
+    display: flex !important;
+}
+
+.delAdress {
+    gap: 46px;
+    margin-bottom: 20px;
+}
+
+.courierAdress {
+    display: flex;
+    gap: 10px;
+}
+
+.courierAdress1, .courierAdress2 {
+    opacity: 80%;
+    padding: 19px 77px;
+    border-radius: 20px;
+    background-color: #141414;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: left;
+    color: white;    
+}
+
+/* CHECKOUT END */
+
+/* CALENDAR START */
+
+.error404 {
+    padding: 100px 0;
+    max-width: 100%;
+}
+
+.error404 img{
+    max-width: 100%;
+}
+
+#dateTimeButton {
+    padding: 20px;
+    border: 1px solid #D9D9D9;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: center;
+    display: none;
+    width: 100%;
+    max-width: 27%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#dateTimeButton:hover {
+    background-color: #e0e0e0;
+}
+.dateTimeButtonActive {
+    display: block !important;
+}
+.calendar-container {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    z-index: 4;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    font-family: Fira Sans;
+}
+.calendar div {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.calendar div:hover:not(.disabled-day):not(.current-day):not(.day-header) {
+    background-color: #e0e0e0;
+}
+.day-header {
+    color: #FF9A19;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: default !important;
+}
+.current-day {
+    color: #4EB5E6;
+}
+.selected-day {
+    background-color: lightblue;
+}
+.disabled-day {
+    color: #ccc;
+    cursor: not-allowed !important;
+}
+.time-selector {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.time-selector div:nth-of-type(2) {
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: left;        
+}
+.time-selector-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.time-selector input {
+    width: 100%;
+    display: flex;
+    padding: 10px 10px 10px 25px;
+    margin: 0 5px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+}
+.month-selector {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+#year {
+    display: none;
+}
+.month-selector select:hover {
+    background-color: #e0e0e0;
+}
+.month-selector select {
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 16px;
+    font-family: Fira Sans;
+    font-weight: bold;
+}
+.month-selector::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    left: 61%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.catal {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+    .novMenuGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridPromNone {
+        padding: 70px 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footerInfo1 {
+        align-items: flex-start !important;
+    }
+
+    .option {
+        margin: 21px 0;
+        font-family: Fira Sans;
+        font-size: 15.11px;
+        font-weight: 300;
+        line-height: 18.88px;
+        text-align: left;        
+    }
+
+    #header, #underHeader {
+        padding-left: 0 !important;
+    }
+    .calendar-container {
+        margin: 20px;
+    }
+    .calendar div {
+        padding: 8px;
+    }
+    .time-selector input {
+        font-size: 18px;
+    }
+    .month-selector select {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    #dateTimeButton {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .calendar div {
+        padding: 5px;
+    }
+    .time-selector input {
+        font-size: 16px;
+    }
+    .month-selector select {
+        font-size: 12px;
+    }
+}
+
+/* CALENDAR END */
+@media (max-width: 1400px) {
+    .underHeader-inner, .menu-inner, .footer-inner, .underMenu, .novinki-inner, .contacts-inner, .promDisc-inner, .personalAcc-inner {
+        margin-right: 15px;
+        margin-left: 15px;
+        width: 100%;
+    }
+
+    .time-selector input {
+        padding-left: 10px;
+    }
+
+    .personalAcc-inner {
+        margin: 0;
+    }
+
+    .novinki-nav ul li {
+        width: 100%;
+    }
+
+    .novinki-inner {
+        padding: 100px 42px 75px;
+    }
+
+    .novinki, .contacts, .promDisc, .personalAcc {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .catal {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-grid {
+        padding: 78px 0 147px 0;
+    }
+    
+    .underMenu {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu {
+        margin: 0 15px !important;
+    }
+
+    #header, #underHeader {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footerLogo {
+        display: flex;
+        justify-content: center;
+        margin: 36px 0 48px;
+    }
+
+    .footerLogoLast {
+        display: none;
+    }
+
+    .footerLogo img {
+        max-width: 214px;
+    }
+
+    .footerInf {
+        gap: 0;
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .footerPrivacy, .footerPrivacyMenu {
+        gap: 20px;
+    }
+
+    .souseH2 {
+        font-family: Fira Sans;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        text-align: center;        
+    }
+
+    .exitAcc {
+       top: 14%;
+    }
+
+    .novMenuGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridProm {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .threeContacts {
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .contact {
+        align-items: center;
+        padding-right: 0;
+        border: none
+    }
+
+    .contacts-inner h2 {
+        border-bottom: 1px solid #000000;
+        text-align: center;
+    }
+
+    .conactsImg {
+        gap: 13px;
+    }
+
+    .popUp-inner, .basketAddOff {
+        flex-direction: column;
+        width: 80%;
+        gap: 20px;
+        overflow-y: scroll;
+    }
+
+    .delAdressfirst {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rightCheckOut {
+        display: none;
+    }
+
+    .rightCheckOutHidden {
+        display: flex;
+        padding: 20px 43px;
+    }
+
+    .delAdress {
+        gap: 20px;
+    }
+
+    #dateTimeButton {
+        max-width: 100%;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 900px) {
+    .gridProm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summ {
+        padding-top: 10px;
+    }
+
+    .summNum h3 {
+        font-size: 35px !important;
+    }
+
+    .basketPrice {
+        width: 100%;
+    }
+
+    .basket-inner {
+        border-radius: 45px;
+        overflow-y: scroll;
+    }
+
+    .basket1 {
+        flex-direction: column;
+    }
+
+    .numButBask {
+        order: 1;
+        margin: 0 22px 0 0;
+    }
+
+    .basketPrice>.popUpPrice {
+        order: 2;
+    }
+
+    .trashImg {
+        order: 3;
+        margin-left: auto;
+    }
+
+    .basketImgTxt p {
+        width: 100%;
+    }
+
+    .summTxt {
+        flex-direction: column-reverse;
+    }
+
+    .makeDeal, .prod {
+        width: 100%;
+        border-radius: 15px;
+        padding: 22px 0;
+    }
+
+    .clearTrash {
+        margin-right: auto;
+    }
+
+    .firstInputAdress, .personalAccButton {
+        width: 100% !important;
+    }
+
+    .adress1Grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ord1 a, .ord1Price {
+        display: none;
+    }
+
+    .ord1 p {
+        width: 100%;
+    }
+
+    .ord1 {
+        gap: 15px;
+        margin: 0;
+    }
+
+    .personalAcc {
+        padding: 0 0 60px;
+    }
+
+    .personalAcc-inner {
+        margin-bottom: 0;
+        margin: 0;
+    }
+
+    .orderHistory-inner, .orderHistory-inner2 {
+        padding-bottom: 0;
+    }
+
+    .footerOrderHistory {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h5-hidden {
+        display: flex;
+        font-family: Fira Sans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.25px;
+        text-align: left;                
+    }    
+
+    .headerOrderHistory .popUpPrice {
+        display: none;
+    }
+
+    .priceHidden {
+        display: flex;
+        justify-content: flex-end;
+        padding: 13px 21px 13px 0;
+        border-top: 1px solid#D9D9D9;
+        margin-top: 30px;
+    }
+
+    .priceHidden .popUpPrice {
+        padding: 0;
+    }
+
+    .priceHidden .popUpPrice span {
+        top: -8px;
+        font-family: Fira Sans;
+        font-size: 12.58px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 15.73px;
+        text-align: left;
+                
+    }
+}
+
+@media (max-width: 768px) {
+
+    .allBg {
+        background-image: url('../img/bgPhone.webp');
+        background-position: 0%;
+        background-size: cover;
+    }
+    
+    .headerCab {
+        padding-right: 13px;
+    }
+
+    header {
+        padding: 27px 0;
+    }
+
+    .burger {
+        padding-left: 13px;
+        display: flex;
+    }
+
+    .headerLogo img {
+        width: 105px;
+    }
+
+    .headerNum {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27.5px;
+    }
+    
+    .underHeader, .underMenu, .catalP, .footerInfo:nth-of-type(2), .catalPGramm div {
+        display: none;
+    }
+
+    .grammNov {
+        display: flex !important;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 16.82px;
+    }
+
+
+    .underHeader-inner, .menu-inner, .footer-inner, .underMenu {
+        margin-right: 13px;
+        margin-left: 13px;
+    }
+
+    .footer-inner {
+        padding-bottom: 28px;
+    }
+
+    .footerPrivacy {
+        margin: 18px auto;
+    }
+
+    .footerPrivacy a:nth-child(1) {
+        margin-right: 60px;
+    }
+
+    .menu {
+        padding-top: 60px;
+    }
+
+    .menu-inner {
+        padding: 23px 15px 29px 15px;
+    }
+
+    .menu-inner img:hover {
+        transform: none;
+    }
+
+    .menu-inner h2 {
+        font-size: 22px;
+        line-height: 27.5px;
+        padding-bottom: 23px;           
+    }
+
+    .menu-grid {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 34px;
+        align-items: end;
+        padding: 40px 0;
+    }
+
+    .menu-grid a {
+        height: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .position p {
+        font-size: 20px;
+        font-weight: 275;
+        line-height: 15px;      
+    }
+
+    .underMenuH3 {
+        font-size: 24px;
+        line-height: 30px;
+        padding-bottom: 53px;
+    }
+
+    .catalogue-inner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .price {
+        display: none;
+    }
+
+    .priceShow {
+        display: block;
+    }
+
+    .price-hidden {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0 20px;
+        padding-right: 20px;
+    }
+
+    .catal h3 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.5px;
+        padding: 0;
+    }
+
+    .catal span {
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 15px;    
+    }
+
+    .catal p {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16.82px;
+        padding: 0;
+    }
+
+    .catal h4 {
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 15px;               
+    }
+
+    .catal a {
+        font-size: 12px;
+        line-height: 16.82px;        
+    }
+
+    .menu img {
+        max-width: 100%;
+        /* width: 245px; */
+        margin: 0 auto;
+    }
+    
+    .menuButton {
+        margin: 49px 0 29px 0;
+    }
+
+    .menuButton a {
+        font-size: 12.69px;
+        font-weight: 400;
+        line-height: 16.92px;               
+    }
+
+    footer {
+        background-image: 
+        url('../img/footerImg.webp'),
+        url('../img/line.svg');
+        background-size: 
+        10% 10%,
+        100% 10%;
+        background-repeat: no-repeat, no-repeat, repeat-x, no-repeat;
+        background-position: 
+        0% 100%,
+        0% 100%;
+    }
+
+    .footerPrivacyMenu {
+        justify-content: flex-start;
+        gap: 92px;
+    }
+
+    .footerInf {
+        margin: 0 32px;
+    }
+
+    .footerLogoLast {
+        margin: 0;
+        margin-bottom: 45px;
+    }
+
+    .footerPrivacy {
+        margin: 18px 39px !important;
+        gap: 58px;
+        width: 100%;
+    }
+
+    .footerPrivacyMenuUnderInf a {
+        font-family: Fira Sans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22.5px;
+        text-align: left;
+                
+    }
+
+    .priceRow {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+
+    .catal span {
+        padding: 0;
+        padding-left: 2px;
+    }
+
+    .novinki {
+        padding: 60px 0 85px;
+    }
+
+    .novMenuGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .novinki-nav {
+        display: none;
+    }
+
+    .novinki-inner {
+        padding: 42px 26px 26px;
+        background-size: contain;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .novMenuH2 h2 {
+        font-family: Fira Sans;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        text-align: center;        
+    }
+
+    .novMenuH2 p {
+        font-family: Fira Sans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.25px;
+        text-align: center;                
+    }
+
+    .novinkiBut {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .contacts-inner h2 {
+        font-size: 20px;
+        line-height: 25px;       
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .contact h3 {
+        font-size: 18px;
+        line-height: 22.5px;
+        text-align: left;        
+    }
+
+    .contact p {
+        font-size: 35px;
+        color: #000 !important;
+        text-decoration: none !important;
+        line-height: 36px;
+    }
+
+    .contacts-inner h4 {
+        margin: 104px 0 23px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .contacts-inner {
+        padding: 42px 26px;
+    }
+
+    .contacts {
+        padding: 60px 0 85px;
+    }
+
+    .login-inner h2 {
+        width: 100%;
+        margin-bottom: 58px;
+    }
+
+    #telephone, #password, #email, .loginMain a, .formInput, .loginButt  {
+        border-radius: 15px;
+    }
+
+    .loginMain {
+        width: 100%;
+    }
+
+    .voitu::before {
+        border-radius: 15px;
+    }
+
+    .loginMain a {
+        padding: 22px 0;
+        font-family: Fira Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 13.32px;
+        text-align: center;
+    }
+
+    .promDisc {
+        padding: 60px 0 85px;
+    }
+
+    .promDisc-inner {
+        padding: 42px 26px 26px;
+        margin-bottom: 0;
+    }
+
+    .promDisc-inner h2 {
+        border-bottom: 1px solid #000000;
+        margin-bottom: 58px;
+        padding-bottom: 0;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;     
+    }
+
+    .txtGridDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gridPromTxt h3 {
+        font-family: Fira Sans;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+    }
+
+    .gridPromTxt {
+        margin-top: 80px;
+    }
+
+    .gridPromTxt p {
+        font-family: Fira Sans;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16.25px;
+        text-align: left;        
+    }
+
+    .gridPromTxt p:nth-child(2) {
+        padding-bottom: 0;
+    }
+
+    .gridProm {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .promGridBlock a {
+        font-family: Fira Sans;
+        font-size: 14.35px;
+        font-weight: 500;
+        line-height: 19.37px;
+        text-align: left;                
+    }
+
+    .promGridBlock img {
+        max-width: 100%;
+    }
+
+    .popUp1 img {
+        width: 245px;
+    }
+
+    .popUp2 h3, .popUp2 h4 {
+        font-size: 16px;
+        line-height: 20px;        
+    }
+
+    .popUp2 h4 {
+        padding: 7px 0 13px;
+    }
+
+    .popUp2 p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .numButtons img {
+        width: 30px;
+    }
+
+    .numButtons p {
+        padding-bottom: 0;
+        padding: 0 13px;
+        width: 40px;
+    }
+
+    .popUp-inner {
+        padding: 24px;
+    }
+
+    .popUpPrice {
+        font-size: 20px !important;
+        font-weight: 500;
+        line-height: 25px;
+        position: relative;
+    }
+
+    .popUpPrice span {
+        top: 20%;
+    }
+
+    .popUpPrice-hidden, .popUpPrice-show, .price-hidden div {
+        display: flex !important;
+    }
+
+    .price-hidden div {
+        align-items: center;
+        gap: 10px;
+        font-family: Fira Sans;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 16.82px;
+        text-align: left;        
+    }
+
+    .popUpPrice-show {
+        justify-content: space-between;
+        padding: 13px 0 20px;
+    }
+
+    .buttonPop, .buttonPop a {
+        width: 100%;
+    }
+
+
+    .numButtons {
+        display: none;
+    }
+    .numButBask {
+        display: flex;
+    }
+
+    .basket-inner {
+        margin: 65px 13px;
+        padding: 25px;
+    }
+
+    .basketImgTxt p {
+        font-family: Fira Sans;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 18.75px;
+        text-align: left;        
+    }
+
+    .summ  {
+        flex-direction: column;
+    }
+    .summNum p {
+        font-size: 14.22px;
+        font-weight: 500;
+        line-height: 17.78px;
+    }
+
+    .header-inner {
+        justify-content: space-between;
+    }
+    
+    .burgerMenu {
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        padding: 27px 13px;
+        top: 0;
+        z-index: 1000;
+        overflow-y: scroll;
+        transition: .4s ease;
+        background-image: url('../img/burgerBg.svg');
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+    }
+
+    .burgerMenu.active {
+        display: flex;
+        transition: .4s ease;
+    }
+
+    .burgerOne h2, .burgerMenuIndex {
+        font-family: Fira Sans;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 15.01px;
+        text-align: left;
+        color: #000;
+        margin: 33px 0;
+        text-decoration: none;
+    }
+
+    .burgerTwoMenu {
+        display: flex;
+        gap: 48px;
+    }
+
+    .burgerTwoMenu a, .burgerTwo a {
+        display: flex;
+        width: fit-content;
+        font-family: Fira Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 15.01px;
+        text-align: left;
+        color: #000;
+        text-decoration: none;        
+        margin-bottom: 28px;
+    }
+
+    .burgerTwoMenu ul li, .burgerTwo ul li  {
+        width: fit-content;
+        list-style-type: none;
+    }
+
+    .burgerActive {
+        color: #93B440;
+        text-transform: uppercase;
+    }
+
+    .burgerTwo {
+        padding: 20px 0;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+
+    .ulLiLast {
+        margin-bottom: 20px !important;
+    }
+
+    .ulLiLastCont {
+        margin-bottom: 0 !important;
+    }
+
+    .burgerThree {
+        margin-top: 20px;
+    }
+
+    .footerBurger {
+        display: flex;
+        gap: 41px;
+        align-items: center;
+    }
+
+    .footerInfoBurger {
+        font-family: Fira Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 15.01px;
+        text-align: left;
+    }
+
+    .infTelBurger {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .infTelBurger a, .infGmailBurger a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .infAdressBurger {
+        margin: 16px 0 12px;
+    }
+
+    .footerBurgerLogo img {
+        width: 155px;
+    }
+
+    .personalAcc-inner {
+        border-radius: 45px;
+        padding: 42px 26px 26px;
+    }
+
+    .oformlennya {
+        padding: 42px 26px 26px;
+        width: 100%
+    }
+
+    .personalAcc-inner h2 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        text-align: left;   
+        text-transform: uppercase;
+        border-bottom: 1px solid;
+        margin-bottom: 58px;
+    }
+
+    .personalAcc-inner h3 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;  
+        margin-bottom: 24px;      
+    }
+
+    .PersonalData input, .adress1 input, .adress2 input, .dataInput input, .personalAccButton {
+        font-family: Fira Sans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.25px;
+        text-align: left;
+        gap: 12px;            
+        display: flex;
+        width: 100%;    
+    }
+
+    .personalAccButton {
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .PersonalData input:nth-of-type(1), .PersonalData input:nth-of-type(2) {
+        margin-bottom: 12px;
+    }
+
+    .adress1Grid {
+        gap: 12px;
+    }
+
+    .adress1 h4, .adress2 h4, .delivery1 h4 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 63px 0 24px      
+    }
+
+    .orderHistory {
+        margin: 63px 0 26px;
+    }
+
+    .orderHistory-inner, .orderHistory-inner2 {
+        padding: 27px 14px 14px;
+    }
+
+    .headerOrderHistory {
+        padding-bottom: 19px;
+        margin-bottom: 22px
+    }
+
+    .headerOrderHistory h4 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18.75px;       
+    }
+
+    .ord1 p {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16.25px;     
+    }
+
+    .priceHidden {
+        margin-top: 22px;
+        padding-bottom: 0;
+    }
+
+    .orderHistory-inner2 {
+        margin-top: 40px;
+    }
+
+    .orderHistoryButton {
+        margin: 13px 0 0;
+    }
+
+    .orderHistoryButton a {
+        padding: 21px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+    }
+
+    .personalAcc {
+        padding-top: 60px;
+    }
+
+    .cutlery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cutleryTxt p, .btnsNum {
+        font-size: 16px;
+        line-height: 32.93px;
+    }
+
+    .courierAdress {
+        display: none;
+    }
+
+    .courier {
+        width: 100%;
+        justify-content: space-around;
+        padding: 13px 0;
+        gap: 10px;
+    }
+
+    .courier1, .courier2 {
+        width: fit-content;
+        font-size: 13px;
+        line-height: 16.25px;
+    }
+
+    .mgTop {
+        margin-top: 0;
+    }
+
+    .calendar-container {
+        width: fit-content;
+    }
+
+    .dataInput {
+        flex-direction: column;
+    }
+
+    .textAreaInput textarea {
+        width: 100%;
+    }
+
+    .textAreaInput a {
+        width: 100%;
+        padding: 23px 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 13.32px;
+        border-radius: 15px;
+    }
+
+    .textAreaInput {
+        margin-bottom: 0;
+    }
+
+    #dateTimeButton {
+        max-width: 100%;
+        font-family: Fira Sans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.25px;
+    }
+
+    .right-checkout-info-txt, .right-checkout-final-txt {
+        font-size: 13px;
+        line-height: 16.25px;
+    }
+
+    .right-checkout-info-value {
+        font-size: 13px;
+        line-height: 16.25px;
+    }
+
+    .right-checkout-final-value {
+        font-size: 15px;
+        line-height: 18px;   
+    }
+
+    .delivery-inner div {
+        font-family: Fira Sans;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16.25px;
+        text-align: left;
+    }
+
+    .deliveryBlocks {
+        gap: 23px;
+    }
+
+    .deliveryBlocks div:nth-of-type(2) p {
+        line-height: 16.25px;
+    }
+
+    .aboutUsBlocks {
+        align-items: flex-start;
+    }
+
+    .aboutUsBlocks div:nth-of-type(1) {
+        font-family: Fira Sans;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+        padding-bottom: 20px;                
+    }
+
+    .aboutUsBlocks div:nth-of-type(1) br {
+        display: block;
+    }
+
+    .aboutUsBlocks div:nth-of-type(2), .aboutUsBlocks div:nth-of-type(3) {
+        padding-bottom: 24px;
+        width: 100%;
+    }
+
+    .exitAcc {
+        top: 6%;
+        padding: 8px 10px;
+    }
+
+    .exitAcc div {
+        gap: 6px;
+        font-size: 14px;
+    }
+
+    .language-selector {
+        display: none;
+    }
+
+    .languageBurger {
+        display: flex !important;
+    }
+
+    .option div {
+        padding: 12px 30px;
+    }
+
+    .error404 {
+        padding: 40px 0;
+    }
+
+    .gridPromNone {
+        font-family: Fira Sans;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    
+    .basketFree {
+        font-family: Fira Sans;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 25px;
+        text-align: left;
+        opacity: 70%;
+        align-items: center;      
+        width: 100%;   
+        justify-content: flex-start;  
+        margin-top: 20px;
+        padding-left: 10%;
+        justify-content: flex-start;
+    }
+    
+    .basketFree div:nth-child(1) {
+        order: 2;
+    }
+
+    .souseImgTxt {
+        width: 100%;
+    }
+
+    .basketFree div:nth-of-type(2) {
+        order: 1;
+        font-family: Fira Sans;
+        font-size: 21.94px;
+        font-weight: 400;
+        line-height: 26.33px;
+        text-align: left;        
+    }
+
+    
+    .footerInf {
+        flex-direction: column-reverse;
+        margin: 0 15px;
+        gap: 47px;
+    }
+
+    .footerInfo,  .footerPrivacyMenuUnderInf {
+        margin-top: 42px;
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .footerPrivacyMenuUnderInf {
+        justify-content: flex-start;
+    }
+
+    .contFoot, .cont2Foot {
+        padding: 0 !important;
+    }
+
+    .cont2Foot h6 {
+        text-align: center !important;
+    }
+
+    .threeContactsFooter {
+        gap: 55px;
+    }
+
+    .threeContactsFooter h3, .threeContactsFooter p {
+        text-align: center !important;
+    }
+
+    .footerLogo {
+        display: none;
+    }
+
+    .txtGridDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footinfLast {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerPrivacyMenuUnderInf div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;    
+    }
+
+    .footerPrivacyMenuUnderInf a {
+        font-family: Fira Sans;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 22.5px;
+        text-align: left;   
+        text-decoration: none; 
+        color: black;
+    }
+
+    .footerLogoLast, .footerInfo1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerInfo1 {
+        margin: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .footerPrivacyMenu {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .txtGrid-Hidden {
+        display: flex !important;
+        width: 100%;
+    }
+
+    .txtGridDiv {
+        padding: 0;
+        width: 100%;
+    }
+
+    .gridPromTxt p:nth-of-type(2) {
+        padding-top: 24px;
+    }
+
+    .txtGrid {
+        display: none;
+    }
+
+    /* .menu img {
+        width: 245px;
+    } */
+
+    .menuImage {
+        width: 100% !important;
+        height: 159px;
+    }
+}
+
+@media (max-width: 500px) {
+    .popUp-inner {
+        width: 100%;
+        margin: 0 13px;
+    }
+}
